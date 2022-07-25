@@ -1,3 +1,5 @@
+import 'package:budget_app/data/expense_data.dart';
+import 'package:budget_app/widgets/bar_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -52,11 +54,22 @@ class _HomeScreenState extends State<HomeScreen> {
               (BuildContext context, int index) {
                 return Container(
                   margin: const EdgeInsets.all(10),
-                  height: 100,
-                  color: Colors.red,
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(10),
+                    boxShadow: const <BoxShadow>[
+                      BoxShadow(
+                        color: Colors.black12,
+                        blurRadius: 6,
+                        spreadRadius: 2,
+                        offset: Offset(0, 2)
+                      )
+                    ]
+                  ),
+                  child: BarChart(expenses: weeklySpending),
                 );
               },
-              childCount: 10
+              childCount: 1
             )
           )
         ],
