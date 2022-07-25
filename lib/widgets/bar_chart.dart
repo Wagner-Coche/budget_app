@@ -94,6 +94,7 @@ class Bar extends StatelessWidget {
           ),
         ),
         Container(
+          margin: const EdgeInsets.only(bottom: 5),
           height: barHeight,
           width: 18,
           decoration: BoxDecoration(
