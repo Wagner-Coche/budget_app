@@ -25,7 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverAppBar(
             forceElevated: true,
             floating: true,
-            pinned: false,
+            pinned: true,
             expandedHeight: 75,
             leading: IconButton(
               onPressed: () {}, 
